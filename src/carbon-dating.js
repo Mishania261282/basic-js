@@ -29,7 +29,7 @@ function dateSample(sampleActivity) {
     t = Math.log(MODERN_ACTIVITY / sampleActivity) / (0.693 / HALF_LIFE_PERIOD);
     temp = t.toFixed(0);
     if (temp > t) return temp;
-    else return ++temp;
+    else return Math.ceil(t);
   } else {
     return false;
   }
